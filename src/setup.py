@@ -39,6 +39,7 @@ PLUGIN_INCLUDE_CONFIGURATION = DOWNLOAD_PLUGIN_DIR + "/resources/collectd-cloudw
 PLUGIN_CONFIGURATION_INCLUDE_LINE = 'Include "/etc/collectd-cloudwatch.conf"\r\n'
 APT_INSTALL_COMMAND = "apt-get install -y "
 YUM_INSTALL_COMMAND = "yum install -y "
+ZYPPER_INSTALL_COMMAND = "zypper install -y "
 SYSTEM_DEPENDENCIES = ["python-pip", "python-setuptools"]
 PIP_INSTALLATION_FLAGS = " install --quiet --upgrade --force-reinstall "
 EASY_INSTALL_COMMAND = "easy_install -U --quiet "
@@ -57,6 +58,7 @@ DISTRIBUTION_TO_INSTALLER = {
     "Red Hat Enterprise Linux Server": YUM_INSTALL_COMMAND,
     "Amazon Linux AMI": YUM_INSTALL_COMMAND,
     "CentOS Linux": YUM_INSTALL_COMMAND,
+    "openSUSE\nVERSION": ZYPPER_INSTALL_COMMAND,
 }
 
 
